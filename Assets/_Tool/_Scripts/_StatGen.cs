@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class _HPGen : MonoBehaviour
+public class _StatGen : MonoBehaviour
 {
-    [SerializeField] public float _inputHP = 5;
+    [SerializeField] public float _inputStat = 5;
 
     public void AdjustHP(float value)
     {
-        if ((_inputHP + value) >= 1)
+        if ((_inputStat + value) >= 1)
         {
-            _inputHP += value;
+            _inputStat += value;
         }
         else 
         {
-            _inputHP = 1;
+            _inputStat = 1;
         }
     }
 }

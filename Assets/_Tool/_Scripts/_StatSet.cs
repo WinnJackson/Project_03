@@ -11,21 +11,29 @@ public class _StatSet : MonoBehaviour
 
 
     [SerializeField] private float _hp;
+    [SerializeField] private _StatGen _recHP;
+
     [SerializeField] private float _attack;
+    [SerializeField] private _StatGen _recATK;
+
     [SerializeField] private float _defense;
+    [SerializeField] private _StatGen _recDEF;
 
-    public void setHP(float value) 
+    public void setHP() 
     {
-        _hp = value;
+        _hp = _recHP._inputStat;
+        Debug.Log("Stat is set to " + _hp);
     }
 
-    public void setATK(float value)
+    public void setATK()
     {
-        _attack = value;
+        _attack = _recATK._inputStat;
+        Debug.Log("Stat is set to " + _attack);
     }
 
-    public void setDEF(float value)
+    public void setDEF()
     {
-        _defense = value;
+        _defense = _recDEF._inputStat;
+        Debug.Log("Stat is set to " + _defense);
     }
 }

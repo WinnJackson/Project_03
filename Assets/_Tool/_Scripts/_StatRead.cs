@@ -6,7 +6,7 @@ using TMPro;
 
 public class _StatRead : MonoBehaviour
 {
-    [SerializeField] private _HPGen _stat;
+    [SerializeField] private _StatGen _stat;
     [SerializeField] private float _statToRead;
     [SerializeField] TextMeshProUGUI _statTextToView;
 
@@ -15,7 +15,7 @@ public class _StatRead : MonoBehaviour
     {
         if (_stat != null)
         {
-            _statToRead = _stat._inputHP;
+            _statToRead = _stat._inputStat;
         }
 
         _statTextToView.text = _statToRead.ToString();
