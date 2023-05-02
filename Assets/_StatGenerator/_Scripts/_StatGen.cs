@@ -6,7 +6,7 @@ public class _StatGen : MonoBehaviour
 {
     [SerializeField] public float _inputStat = 5;
 
-    public void AdjustHP(float value)
+    public void AdjustStat(float value)
     {
         if ((_inputStat + value) >= 1)
         {
