@@ -8,6 +8,13 @@ public class _HPGen : MonoBehaviour
 
     public void AdjustHP(float value)
     {
-        _inputHP += value;
+        if ((_inputHP + value) >= 1)
+        {
+            _inputHP += value;
+        }
+        else 
+        {
+            _inputHP = 1;
+        }
     }
 }
